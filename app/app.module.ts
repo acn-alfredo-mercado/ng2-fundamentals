@@ -12,7 +12,8 @@ import {
     EventDetailsComponent,
     CreateEventComponent,
     EventRouteActivator,
-    EventListResolver
+    EventListResolver,
+    CreateSessionComponent
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
@@ -35,6 +36,7 @@ import { appRoutes } from './routes';
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
+        CreateSessionComponent,
         NavBarComponent
     ],
     bootstrap: [EventsAppComponent],

@@ -1,5 +1,5 @@
 import { EventService } from './shared/event.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,8 +14,9 @@ import { Router } from '@angular/router';
   `]
 })
 
-export class CreateEventComponent {
+export class CreateEventComponent implements OnInit {
     isDirty: boolean = true;
+    event: any;
     constructor(
         private eventService: EventService,
         private router: Router) {}
@@ -28,6 +29,22 @@ export class CreateEventComponent {
 
     cancel() {
         this.router.navigate(['/events']);
+    }
+
+    ngOnInit() {
+        this.event = {
+            name: 'Peps Event',
+            date: '8/12/1996',
+            time: '10am',
+            price: 800.99,
+            location: {
+                address: 'Novaliches',
+                city: 'Quezon City',
+                country: 'Philippines'
+            },
+            onlineUrl: 'http://peps.com',
+            imageUrl: 'http://peps.com/logo.png'
+        }
     }
 
 }
