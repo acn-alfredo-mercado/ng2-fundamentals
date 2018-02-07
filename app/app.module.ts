@@ -1,5 +1,10 @@
 import { AuthService } from './user/auth.service';
-import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
+import { 
+    TOASTR_TOKEN, 
+    Toastr,
+    JQ_TOKEN,
+    CollapsibleWellComponent } from './common/index';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -23,9 +28,9 @@ import { NavBarComponent } from './nav/navbar.component';
 import { Error404Component } from './errors/404.component';
 
 import { appRoutes } from './routes';
-import { CollapsibleWellComponent } from './common/collapsible-well.component';
 
 declare let toastr: Toastr;
+declare let jQuery: Object;
 
 @NgModule({
     imports: [
