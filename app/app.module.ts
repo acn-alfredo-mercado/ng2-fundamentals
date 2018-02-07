@@ -14,7 +14,8 @@ import {
     EventRouteActivator,
     EventListResolver,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    DurationPipe
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
@@ -41,7 +42,8 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
         CreateSessionComponent,
         SessionListComponent,
         NavBarComponent,
-        CollapsibleWellComponent
+        CollapsibleWellComponent,
+        DurationPipe
     ],
     bootstrap: [EventsAppComponent],
     providers: [
