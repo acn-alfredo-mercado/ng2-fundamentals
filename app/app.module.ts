@@ -1,3 +1,4 @@
+import { SessionListComponent } from './events/event-details/session-list.component';
 import { AuthService } from './user/auth.service';
 import { ToastrService } from './common/toastr.service';
 import { NgModule } from '@angular/core';
@@ -37,6 +38,7 @@ import { appRoutes } from './routes';
         CreateEventComponent,
         Error404Component,
         CreateSessionComponent,
+        SessionListComponent,
         NavBarComponent
     ],
     bootstrap: [EventsAppComponent],
