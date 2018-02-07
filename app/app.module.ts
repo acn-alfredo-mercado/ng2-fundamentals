@@ -22,7 +22,9 @@ import {
     EventListResolver,
     CreateSessionComponent,
     SessionListComponent,
-    DurationPipe
+    DurationPipe,
+    UpvoteComponent,
+    VoterService
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
@@ -54,6 +56,7 @@ declare let jQuery: Object;
         CollapsibleWellComponent,
         SimpleModalComponent,
         ModalTriggerDirective,
+        UpvoteComponent,
         DurationPipe
     ],
     bootstrap: [EventsAppComponent],
@@ -68,6 +71,7 @@ declare let jQuery: Object;
         EventRouteActivator,
         EventListResolver,
         AuthService,
+        VoterService,
         {
             provide: 'canDeactivateCreateEvent', useValue: checkDirtyState
         }
