@@ -3,7 +3,8 @@ import {
     TOASTR_TOKEN, 
     Toastr,
     JQ_TOKEN,
-    CollapsibleWellComponent } from './common/index';
+    CollapsibleWellComponent,
+    SimpleModalComponent } from './common/index';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -50,6 +51,7 @@ declare let jQuery: Object;
         SessionListComponent,
         NavBarComponent,
         CollapsibleWellComponent,
+        SimpleModalComponent,
         DurationPipe
     ],
     bootstrap: [EventsAppComponent],
@@ -57,6 +59,9 @@ declare let jQuery: Object;
         EventService,
         {
             provide: TOASTR_TOKEN, useValue: toastr
+        },
+        {
+            provide: JQ_TOKEN, useValue: jQuery
         },
         EventRouteActivator,
         EventListResolver,
