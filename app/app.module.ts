@@ -4,7 +4,8 @@ import {
     Toastr,
     JQ_TOKEN,
     CollapsibleWellComponent,
-    SimpleModalComponent } from './common/index';
+    SimpleModalComponent,
+    ModalTriggerDirective} from './common/index';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -52,6 +53,7 @@ declare let jQuery: Object;
         NavBarComponent,
         CollapsibleWellComponent,
         SimpleModalComponent,
+        ModalTriggerDirective,
         DurationPipe
     ],
     bootstrap: [EventsAppComponent],
